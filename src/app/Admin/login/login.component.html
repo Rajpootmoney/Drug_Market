@@ -1,0 +1,36 @@
+<div class="parent">
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Welcome to Online Drug Market</h2>
+      <form>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input
+            name="userName"
+            [(ngModel)]="loginObj.userName"
+            type="text"
+            name="username"
+            required=""
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            name="password"
+            [(ngModel)]="loginObj.password"
+            type="password"
+            name="password"
+            required=""
+          />
+        </div>
+        <div class="button-group">
+          <button type="button" (click)="onLogin()">Login</button>
+        </div>
+        <div class="extra-links">
+          <a href="#">Forgot Password?</a>
+          <a href="#">Create an Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

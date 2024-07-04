@@ -1,0 +1,102 @@
+<div class="parent">
+  <main>
+    <button id="toggleBestSellers" (click)="toggleBestSelling()">
+        {{ isBestSellingVisible ? 'Hide Best Selling Drugs' : 'Show Best Selling Drugs' }}
+      </button>
+    <div class="product-sections">
+      <section class="all-products">
+        <h2>All Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="aspirin.jpg" alt="Aspirin" />
+            <h3>Aspirin</h3>
+            <p>
+              A common pain reliever used to reduce fever and relieve mild to
+              moderate pain.
+            </p>
+            <p class="price">$10</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="ibuprofen.jpg" alt="Ibuprofen" />
+            <h3>Ibuprofen</h3>
+            <p>
+              Used to reduce fever and treat pain or inflammation caused by many
+              conditions.
+            </p>
+            <p class="price">$15</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="acetaminophen.jpg" alt="Acetaminophen" />
+            <h3>Acetaminophen</h3>
+            <p>
+              Relieves pain and reduces fever. Commonly used for headaches,
+              muscle aches, and arthritis.
+            </p>
+            <p class="price">$12</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="amoxicillin.jpg" alt="Amoxicillin" />
+            <h3>Amoxicillin</h3>
+            <p>
+              An antibiotic used to treat a number of bacterial infections such
+              as pneumonia and bronchitis.
+            </p>
+            <p class="price">$25</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="lisinopril.jpg" alt="Lisinopril" />
+            <h3>Lisinopril</h3>
+            <p>
+              Used to treat high blood pressure and heart failure, and to
+              improve survival after a heart attack.
+            </p>
+            <p class="price">$20</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="best-sellers"
+        *ngIf="isBestSellingVisible"
+        id="bestSellers"
+      >
+        <h2>Best Selling Drugs</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="lipitor.jpg" alt="Lipitor" />
+            <h3>Lipitor</h3>
+            <p>
+              Used to lower cholesterol and reduce the risk of heart disease.
+            </p>
+            <p class="price">$30</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="synthroid.jpg" alt="Synthroid" />
+            <h3>Synthroid</h3>
+            <p>
+              A thyroid medicine that replaces a hormone normally produced by
+              your thyroid gland.
+            </p>
+            <p class="price">$25</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="ventolin.jpg" alt="Ventolin" />
+            <h3>Ventolin</h3>
+            <p>
+              Used to treat or prevent bronchospasm in people with reversible
+              obstructive airway disease.
+            </p>
+            <p class="price">$18</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
