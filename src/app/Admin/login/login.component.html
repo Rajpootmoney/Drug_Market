@@ -1,36 +1,62 @@
-<div class="parent">
-  <div class="login-container">
-    <div class="login-box">
-      <h2>Welcome to Online Drug Market</h2>
-      <form>
-        <div class="input-group">
-          <label for="username">Username</label>
+<body>
+  <div class="parent">
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+      <div class="signup">
+        <form>
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input
+            name="firstName"
+            [(ngModel)]="signUpObject.firstName"
+            type="text"
+            required=""
+            placeholder="First Name"
+          />
+          <input
+            name="lastName"
+            [(ngModel)]="signUpObject.lastName"
+            type="text"
+            required=""
+            placeholder="Last Name"
+          />
+          <input
+            name="email"
+            [(ngModel)]="signUpObject.email"
+            type="email"
+            required=""
+            placeholder="Email"
+          />
+          <input
+            name="password"
+            [(ngModel)]="signUpObject.password"
+            type="password"
+            required=""
+            placeholder="Password"
+          />
+          <button type="button" (click)="signUpClick()">Sign Up</button>
+        </form>
+      </div>
+
+      <div class="login">
+        <form>
+          <label for="chk" aria-hidden="true">Login</label>
           <input
             name="userName"
-            [(ngModel)]="loginObj.userName"
+            [(ngModel)]="loginObj.email"
             type="text"
-            name="username"
             required=""
+            placeholder="Email"
           />
-        </div>
-        <div class="input-group">
-          <label for="password">Password</label>
           <input
             name="password"
             [(ngModel)]="loginObj.password"
             type="password"
-            name="password"
             required=""
+            placeholder="Password"
           />
-        </div>
-        <div class="button-group">
-          <button type="button" (click)="onLogin()">Login</button>
-        </div>
-        <div class="extra-links">
-          <a href="#">Forgot Password?</a>
-          <a href="#">Create an Account</a>
-        </div>
-      </form>
+          <button (click)="loginClick()">Login</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</body>

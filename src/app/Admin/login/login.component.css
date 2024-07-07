@@ -1,85 +1,102 @@
-parent {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.parent {
   margin: 0;
-  font-family: "Arial", sans-serif;
-}
-
-.login-container {
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
 
-.login-box {
-  background: white;
+.main {
+  width: 350px;
+  height: 500px;
+  background: red;
+  overflow: hidden;
+  background: url("https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg?w=996&t=st=1720241712~exp=1720242312~hmac=4cb2663cdc12bbe2f52974c78aab9e233c6ba5cb385fd50dde64f8efa9111063")
+    no-repeat center/ cover;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  width: 300px;
-  text-align: center;
+  box-shadow: 5px 20px 50px #000;
 }
 
-.login-box h2 {
-  margin-bottom: 20px;
-  color: #0072ff;
+#chk {
+  display: none;
 }
 
-.input-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.input-group input {
+.signup {
+  position: relative;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
+  height: 100%;
+}
+
+label {
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+input {
+  width: 60%;
+  height: 10px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 12px;
+  border: none;
+  outline: none;
   border-radius: 5px;
 }
 
-.button-group {
-  margin-top: 20px;
-}
-
-.button-group button {
-  width: 100%;
-  padding: 10px;
-  background: #0072ff;
+button {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 30px;
+  outline: none;
   border: none;
   border-radius: 5px;
-  color: white;
-  font-size: 16px;
+  transition: 0.2s ease-in;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
-.button-group button:hover {
-  background: #005bb5;
+button:hover {
+  background: #6d44b8;
 }
 
-.extra-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
+.login {
+  height: 460px;
+  background: #eee;
+  border-radius: 60% / 10%;
+  transform: translateY(-180px);
+  transition: 0.8s ease-in-out;
 }
 
-.extra-links a {
-  color: #0072ff;
-  text-decoration: none;
-  font-size: 14px;
+.login label {
+  color: #573b8a;
+  transform: scale(0.6);
 }
 
-.extra-links a:hover {
-  text-decoration: underline;
+#chk:checked ~ .login {
+  transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label {
+  transform: scale(1);
+}
+
+#chk:checked ~ .signup label {
+  transform: scale(0.6);
 }

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './Admin/login/login.component';
 import { LayoutComponent } from './Admin/layout/layout.component';
 import { ProductsComponent } from './Admin/products/products.component';
+import { authenticationGuard } from './AuthGuard/authentication.guard';
 
 export const routes: Routes = [
   // these are just default routes of the application
@@ -21,6 +22,7 @@ export const routes: Routes = [
       {
         path: 'products',
         component: ProductsComponent,
+        canActivate: [authenticationGuard],
       },
     ],
   },
